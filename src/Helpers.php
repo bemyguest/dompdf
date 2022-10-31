@@ -907,7 +907,7 @@ class Helpers
         try {
             if ($is_local_path || ini_get('allow_url_fopen') || !$can_use_curl) {
                 if ($is_local_path === false) {
-                    $uri = Helpers::encodeURI($uri);
+                    //$uri = Helpers::encodeURI($uri);
                 }
                 if (isset($maxlen)) {
                     $result = file_get_contents($uri, false, $context, $offset, $maxlen);
